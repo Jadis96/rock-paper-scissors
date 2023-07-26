@@ -59,7 +59,7 @@ function playRound (playerSelection, computerSelection) {
     return "You lose";
     }
 
-} 
+}
 
 
 
