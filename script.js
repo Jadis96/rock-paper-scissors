@@ -29,6 +29,14 @@ function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase(); 
     computerSelection = computerSelection.toLowerCase();
 
+    const validChoices = ["rock", "paper", "scissors"];
+
+    // Input validation loop
+    while (!validChoices.includes(playerSelection)) {
+        // The player's input is not valid, so prompt them to enter a valid choice
+        playerSelection = prompt("Invalid input. Please enter a correct choice (Rock, Paper, or Scissors): ").toLowerCase();
+    }
+
     if (playerSelection === computerSelection) {
         let specificMessage;
          if (playerSelection === "rock" && computerSelection === "rock") {
